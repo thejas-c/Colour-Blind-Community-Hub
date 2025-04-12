@@ -6,6 +6,47 @@
     <title>Color Blindness Community Hub - Advocacy</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .advocacy-section {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            flex: 1 1 calc(33% - 20px);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .active {
+            color: blue;
+            font-weight: bold;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,47 +66,27 @@
     </nav>
     <main>
         <section class="advocacy-section">
-            <h2>Advocacy</h2>
+            <h2>Advocacy for Color Blindness</h2>
             <div class="content-grid">
                 <div class="card">
-                    <h3>Raising Awareness</h3>
-                    <p>Learn how to advocate for color blindness inclusion.</p>
-                    <button class="card-button">Get Involved</button>
+                    <h3>Gary Subramaniam</h3>
+                    <p>Deputy Editor of a national daily, overcoming visual impairment with innovative tools.</p>
+                    <a href="https://www.dnaindia.com/delhi/report-high-achievers-who-lost-eyesight-but-not-vision-honoured-2338477" class="card-button" target="_blank">Learn More</a>
                 </div>
                 <div class="card">
-                    <h3>Policy Changes</h3>
-                    <p>Support efforts for better accessibility policies.</p>
-                    <button class="card-button">Learn More</button>
+                    <h3>Jagdish Luthra</h3>
+                    <p>Founder of Rosemary Institute, empowering students for competitive exams.</p>
+                    <a href="https://www.dnaindia.com/delhi/report-high-achievers-who-lost-eyesight-but-not-vision-honoured-2338477" class="card-button" target="_blank">Learn More</a>
                 </div>
-            </div>
-
-            <div class="advocacy-action-section">
-                <h3>Take Action</h3>
-                <form id="advocacy-form" class="advocacy-form">
-                    <div class="form-group">
-                        <label for="advocacy-email">Email:</label>
-                        <input type="email" id="advocacy-email" name="email" required placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="advocacy-name">Full Name:</label>
-                        <input type="text" id="advocacy-name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <button type="submit" class="card-button">Sign Up to Advocate</button>
-                </form>
-                <p id="advocacy-message" class="advocacy-message">Sign up to support our advocacy efforts!</p>
-            </div>
-
-            <div class="benefits-section">
-                <h3>Benefits of Advocacy Participation</h3>
-                <ul class="benefits-list">
-                    <li>Influence policies to improve accessibility for color blind individuals.</li>
-                    <li>Receive training on effective advocacy techniques.</li>
-                    <li>Join a movement to raise global awareness.</li>
-                    <li>Access to exclusive advocacy resources and events.</li>
-                </ul>
+                <div class="card">
+                    <h3>Ray Charles</h3>
+                    <p>Legendary musician who pioneered soul music despite visual impairment.</p>
+                    <a href="https://nextluxury.com/entertainment/famous-blind-people/" class="card-button" target="_blank">Learn More</a>
+                </div>
             </div>
         </section>
     </main>
+    <!-- Updated Footer Section -->
     <footer>
         <div class="footer-content">
             <div class="footer-top">
@@ -74,21 +95,17 @@
             </div>
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Learn about our mission.</p>
-                </div>
-                <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="https://www.enchroma.com/pages/color-accessibility-program">Accessibility Support</a></li>
+                        <li><a href="https://www.colourblindawareness.org/contact-us/">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" aria-label="Facebook" class="social-icon">Facebook</a>
-                <a href="#" aria-label="Twitter" class="social-icon">Twitter</a>
-                <a href="#" aria-label="Instagram" class="social-icon">Instagram</a>
+                <a href="https://www.facebook.com/ColourBlindAwareness/" aria-label="Facebook" class="social-icon">Facebook</a>
+                <a href="https://twitter.com/colourblindorg" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="https://www.instagram.com/colourblindawareness/" aria-label="Instagram" class="social-icon">Instagram</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-line"></div>
@@ -98,6 +115,17 @@
     </footer>
     <button id="scroll-top" aria-label="Scroll to top">↑</button>
     <div id="live-notification" class="sr-only" role="alert"></div>
+    <script>
+        // Highlight the active link based on the current URL
+        const navLinks = document.querySelectorAll('.nav-container a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active'); // Add "active" class to the matching link
+            } else {
+                link.classList.remove('active'); // Remove "active" class from others
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
