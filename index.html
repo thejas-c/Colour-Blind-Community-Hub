@@ -30,12 +30,12 @@
                 <div class="card">
                     <h3>Understanding Color Blindness</h3>
                     <p>Explore the basics of color vision deficiency (CVD) and its impact on daily life, including a detailed overview from the National Eye Institute.</p>
-                    <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness" class="card-button" target="_blank">Learn More</a>
+                    <a href="https://www.nceas.ucsb.edu/sites/default/files/2022-06/Colorblind%20Safe%20Color%20Schemes.pdf" class="card-button" target="_blank">Learn More</a>
                 </div>
                 <div class="card">
                     <h3>Barriers in Education for Color Blind Students</h3>
                     <p>A groundbreaking study by EnChroma reveals how color blindness poses challenges in school, with 78% of respondents facing frustration with color-coded materials.</p>
-                    <a href="https://www.enchroma.com/pages/unveiling-the-hidden-challenges-of-color-blindness-in-education" class="card-button" target="_blank">Learn More</a>
+                    <a href="https://eyesurgeryguide.org/supporting-color-blindness-tools-and-resources/" class="card-button" target="_blank">Learn More</a>
                 </div>
             </div>
             <h2>Case Studies</h2>
@@ -43,7 +43,7 @@
                 <div class="case-study-card">
                     <h4>Daily Challenges of Protanopia</h4>
                     <p>Read about the experiences of individuals with protanopia, a type of red-green color blindness, and how it affects their education and career choices.</p>
-                    <a href="https://www.colourblindawareness.org/resources/" class="card-button" target="_blank">Read Case</a>
+                    <a href="https://battleforblindness.org/a-world-beyond-colors-practical-resources-for-colorblind-individuals" class="card-button" target="_blank">Read Case</a>
                 </div>
             </div>
         </section>
@@ -55,10 +55,6 @@
                 <p class="footer-tagline">Empowering the color blindness community.</p>
             </div>
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Learn about our mission to support and raise awareness for color vision deficiency.</p>
-                </div>
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
@@ -80,6 +76,17 @@
     </footer>
     <button id="scroll-top" aria-label="Scroll to top">↑</button>
     <div id="live-notification" class="sr-only" role="alert"></div>
+    <script>
+        // Highlight the active link based on the current URL
+        const navLinks = document.querySelectorAll('.nav-container a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active'); // Add "active" class to the matching link
+            } else {
+                link.classList.remove('active'); // Remove "active" class from others
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
