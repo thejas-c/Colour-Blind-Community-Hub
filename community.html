@@ -6,6 +6,58 @@
     <title>Color Blindness Community Hub - Community</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General layout */
+        .community-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .email-subscription {
+            flex: 1 1 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .benefits {
+            flex: 1 1 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .benefits h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            margin-bottom: 20px;
+            font-size: 16px;
+            animation: fadeIn 3s infinite;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .active {
+            color: blue; /* Highlight active link in blue */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,56 +66,34 @@
     </header>
     <nav>
         <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="resources.html">Resources</a>
-            <a href="tools.html">Tools</a>
-            <a href="community.html" class="active">Community</a>
-            <a href="advocacy.html">Advocacy</a>
-            <a href="settings.html">Settings</a>
-            <a href="blogs.html">Blogs</a>
+            <a href="index.html" id="home-link">Home</a>
+            <a href="resources.html" id="resources-link">Resources</a>
+            <a href="tools.html" id="tools-link">Tools</a>
+            <a href="community.html" id="community-link" class="active">Community</a>
+            <a href="advocacy.html" id="advocacy-link">Advocacy</a>
+            <a href="settings.html" id="settings-link">Settings</a>
+            <a href="blogs.html" id="blogs-link">Blogs</a>
         </div>
     </nav>
-    <main>
-        <section class="community-section">
-            <h2>Community</h2>
-            <div class="content-grid">
-                <div class="card">
-                    <h3>Support Groups</h3>
-                    <p>Connect with others affected by color blindness.</p>
-                    <button class="card-button">Join Now</button>
-                </div>
-                <div class="card">
-                    <h3>Discussion Forums</h3>
-                    <p>Share experiences and get advice from the community.</p>
-                    <button class="card-button">Visit Forum</button>
-                </div>
-            </div>
-
-            <div class="join-section">
-                <h3>Join Our Community</h3>
-                <form id="join-form" class="join-form">
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required placeholder="Enter your password">
-                    </div>
-                    <button type="submit" class="card-button">Submit</button>
-                </form>
-                <p id="join-message" class="join-message">Fill out the form to join our community!</p>
-            </div>
-
-            <div class="benefits-section">
-                <h3>Benefits of Joining</h3>
-                <ul class="benefits-list">
-                    <li>Access to exclusive support resources and tools.</li>
-                    <li>Connect with a network of color blind individuals worldwide.</li>
-                    <li>Participate in advocacy campaigns to promote awareness.</li>
-                    <li>Receive updates on the latest research and technology.</li>
-                </ul>
-            </div>
+    <main class="community-container">
+        <section class="email-subscription">
+            <h2>Join the Community</h2>
+            <p>Subscribe to stay updated and connect with fellow members!</p>
+            <form id="community-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section class="benefits">
+            <h3>Benefits of Joining the Community</h3>
+            <ul class="benefits-list">
+                <li>Access exclusive resources and tools.</li>
+                <li>Connect with experts in accessibility design.</li>
+                <li>Participate in workshops and webinars.</li>
+                <li>Receive community-driven insights and updates.</li>
+                <li>Contribute to advocacy for colorblind accessibility.</li>
+            </ul>
         </section>
     </main>
     <footer>
@@ -74,21 +104,17 @@
             </div>
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Learn about our mission.</p>
-                </div>
-                <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="https://www.enchroma.com/pages/color-accessibility-program">Accessibility Support</a></li>
+                        <li><a href="https://www.colourblindawareness.org/contact-us/">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="social-links">
-                <a href="#" aria-label="Facebook" class="social-icon">Facebook</a>
-                <a href="#" aria-label="Twitter" class="social-icon">Twitter</a>
-                <a href="#" aria-label="Instagram" class="social-icon">Instagram</a>
+                <a href="https://www.facebook.com/ColourBlindAwareness/" aria-label="Facebook" class="social-icon">Facebook</a>
+                <a href="https://twitter.com/colourblindorg" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="https://www.instagram.com/colourblindawareness/" aria-label="Instagram" class="social-icon">Instagram</a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-line"></div>
@@ -96,8 +122,40 @@
             </div>
         </div>
     </footer>
-    <button id="scroll-top" aria-label="Scroll to top">↑</button>
-    <div id="live-notification" class="sr-only" role="alert"></div>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle form submission for email
+            const communityForm = document.getElementById("community-form");
+            if (communityForm) {
+                communityForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById("email").value;
+                    if (email) {
+                        alert(Thankyou  , joiningcommunity, $,email 
+                    }else {
+                        alert("Please enter a valid email address.");
+                    }
+                });
+            
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navContainer = document.querySelector('.nav-container');
+            if (menuToggle && navContainer) {
+                menuToggle.addEventListener('click', () => {
+                    navContainer.classList.toggle('active');
+                });
+            }
+
+            // Highlight Active Navigation Link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(a => a.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+        ;
+    </script>
 </body>
 </html>
