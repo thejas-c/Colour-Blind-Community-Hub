@@ -39,5 +39,7 @@ Describe your Use Cases here:
  - Colorblind individuals in electronics can use the tool to identify resistor color codes and wire colors accurately, ensuring precise assembly and troubleshooting.
  - Designers with color blindness can upload graphics or design elements to identify colors, helping them create visuals that adhere to specific branding or design requirements.
  - Colorblind individuals planning home decoration can analyze furniture or room images to identify and name colors, making it easier to choose matching or complementary color schemes.
- - Uploading outfit images helps colorblind users identify clothing colors![image](https://github.com/user-attachments/assets/a97dc936-943a-4312-b304-4f66ac274e80)
+ - Uploading outfit images helps colorblind users identify clothing colors
 
+Homepage:
+![image](images/res.jpeg)
