@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Blindness Community Hub - Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Color Blindness Community Hub</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu" class="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="tools.html">Tools</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="advocacy.html">Advocacy</a>
+            <a href="settings.html">Settings</a>
+            <a href="blogs.html">Blogs</a>
+        </div>
+    </nav>
+    <main>
+        <section class="community-section">
+            <h2>Community</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Support Groups</h3>
+                    <p>Connect with others affected by color blindness.</p>
+                    <button class="card-button">Join Now</button>
+                </div>
+                <div class="card">
+                    <h3>Discussion Forums</h3>
+                    <p>Share experiences and get advice from the community.</p>
+                    <button class="card-button">Visit Forum</button>
+                </div>
+            </div>
+
+            <div class="join-section">
+                <h3>Join Our Community</h3>
+                <form id="join-form" class="join-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="card-button">Submit</button>
+                </form>
+                <p id="join-message" class="join-message">Fill out the form to join our community!</p>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Benefits of Joining</h3>
+                <ul class="benefits-list">
+                    <li>Access to exclusive support resources and tools.</li>
+                    <li>Connect with a network of color blind individuals worldwide.</li>
+                    <li>Participate in advocacy campaigns to promote awareness.</li>
+                    <li>Receive updates on the latest research and technology.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h2>Stay Connected</h2>
+                <p class="footer-tagline">Empowering the color blindness community.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Learn about our mission.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook" class="social-icon">Facebook</a>
+                <a href="#" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="#" aria-label="Instagram" class="social-icon">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p>© 2025 Color Blindness Community Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="scroll-top" aria-label="Scroll to top">↑</button>
+    <div id="live-notification" class="sr-only" role="alert"></div>
+    <script src="script.js"></script>
+</body>
+</html>
