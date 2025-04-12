@@ -6,6 +6,55 @@
     <title>Color Blindness Community Hub - Resources</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General layout for main content and color palette */
+        .content-container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .main-content {
+            flex: 3;
+            padding: 20px;
+        }
+        .color-palette {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .palette-section {
+            margin-bottom: 20px;
+        }
+        .palette-section h4 {
+            margin-bottom: 10px;
+        }
+        .palette-colors span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 1px solid #000;
+        }
+        .tool-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Spacing between resource cards */
+        }
+        .card {
+            flex: 1 1 calc(50% - 20px); /* Adjust card width with spacing */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .active {
+            color: blue; /* Highlight active link in blue */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,39 +63,78 @@
     </header>
     <nav>
         <div class="nav-container">
-            <a href="index.html">Home</a>
-            <a href="resources.html" class="active">Resources</a>
-            <a href="tools.html">Tools</a>
-            <a href="community.html">Community</a>
-            <a href="advocacy.html">Advocacy</a>
-            <a href="settings.html">Settings</a>
-            <a href="blogs.html">Blogs</a>
+            <a href="index.html" id="home-link">Home</a>
+            <a href="resources.html" id="resources-link">Resources</a>
+            <a href="tools.html" id="tools-link">Tools</a>
+            <a href="community.html" id="community-link">Community</a>
+            <a href="advocacy.html" id="advocacy-link">Advocacy</a>
+            <a href="settings.html" id="settings-link">Settings</a>
+            <a href="blogs.html" id="blogs-link">Blogs</a>
         </div>
     </nav>
-    <main>
-        <section class="resource-section">
-            <h2>Educational Resources</h2>
-            <div class="content-grid">
+    <main class="content-container">
+        <section class="main-content">
+            <h2>Verified Resources on Color Blindness</h2>
+            <div class="tool-grid">
                 <div class="card">
-                    <h3>Resource Sheet for Teachers</h3>
-                    <p>A downloadable guide from Colour Blind Awareness for educators to support color blind students in the classroom.</p>
-                    <a href="https://www.colourblindawareness.org/resources/" class="card-button" target="_blank">Learn More</a>
+                    <h3>Colorblind Safe Color Schemes</h3>
+                    <p>Explore colorblind-safe palettes for scientific publications, artwork, and presentations.</p>
+                    <a href="https://www.nceas.ucsb.edu/sites/default/files/2022-06/Colorblind%20Safe%20Color%20Schemes.pdf" class="card-button" target="_blank">Learn More</a>
                 </div>
                 <div class="card">
-                    <h3>Supporting Students in STEM with CVD</h3>
-                    <p>The Institute of Physics provides a booklet with strategies for accommodating color vision deficiency in STEM education.</p>
-                    <a href="https://www.colourblindawareness.org/resources/" class="card-button" target="_blank">Learn More</a>
+                    <h3>Supporting Color Blindness</h3>
+                    <p>Discover tools and resources for creating accessible designs for colorblind individuals.</p>
+                    <a href="https://eyesurgeryguide.org/supporting-color-blindness-tools-and-resources/" class="card-button" target="_blank">Learn More</a>
                 </div>
-            </div>
-            <h2>Research Articles</h2>
-            <div class="case-study-grid">
-                <div class="case-study-card">
-                    <h4>Prevalence of Color Vision Deficiency in Africa</h4>
-                    <p>A meta-analysis exploring the prevalence and impact of color blindness across African populations.</p>
-                    <a href="https://medlineplus.gov/colorblindness.html" class="card-button" target="_blank">Read Article</a>
+                <div class="card">
+                    <h3>We Are Colorblind</h3>
+                    <p>Find resources for designing games, websites, and more for colorblind users.</p>
+                    <a href="https://wearecolorblind.com/resources/" class="card-button" target="_blank">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Color Oracle</h3>
+                    <p>Use this free simulator to visualize how your designs appear to colorblind individuals.</p>
+                    <a href="https://colororacle.org/" class="card-button" target="_blank">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Color Blind Accessibility</h3>
+                    <p>Learn about web design practices that improve accessibility for colorblind users.</p>
+                    <a href="https://www.accessibilitychecker.org/blog/color-blind-accessibility/" class="card-button" target="_blank">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>RGBlind Toolkit</h3>
+                    <p>An open-source toolkit for simulating color blindness and improving web accessibility.</p>
+                    <a href="https://github.com/interaktivarum/rgblind" class="card-button" target="_blank">Learn More</a>
                 </div>
             </div>
         </section>
+        <aside class="color-palette">
+            <h3>Color Palette for Different Color Blindness</h3>
+            <div class="palette-section">
+                <h4>Protanopia</h4>
+                <div class="palette-colors">
+                    <span style="background-color: #ffcccb;"></span>
+                    <span style="background-color: #ffe4b5;"></span>
+                    <span style="background-color: #8fbc8f;"></span>
+                </div>
+            </div>
+            <div class="palette-section">
+                <h4>Deuteranopia</h4>
+                <div class="palette-colors">
+                    <span style="background-color: #ffdead;"></span>
+                    <span style="background-color: #add8e6;"></span>
+                    <span style="background-color: #90ee90;"></span>
+                </div>
+            </div>
+            <div class="palette-section">
+                <h4>Tritanopia</h4>
+                <div class="palette-colors">
+                    <span style="background-color: #f4a460;"></span>
+                    <span style="background-color: #b0c4de;"></span>
+                    <span style="background-color: #e0ffff;"></span>
+                </div>
+            </div>
+        </aside>
     </main>
     <footer>
         <div class="footer-content">
@@ -55,10 +143,6 @@
                 <p class="footer-tagline">Empowering the color blindness community.</p>
             </div>
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Learn about our mission to support and raise awareness for color vision deficiency.</p>
-                </div>
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
@@ -80,6 +164,17 @@
     </footer>
     <button id="scroll-top" aria-label="Scroll to top">↑</button>
     <div id="live-notification" class="sr-only" role="alert"></div>
+    <script>
+        // Highlight the active link based on the current URL
+        const navLinks = document.querySelectorAll('.nav-container a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active'); // Add "active" class to the matching link
+            } else {
+                link.classList.remove('active'); // Remove "active" class from others
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
