@@ -41,4 +41,4 @@ Describe your Use Cases here:
  - Colorblind individuals planning home decoration can analyze furniture or room images to identify and name colors, making it easier to choose matching or complementary color schemes.
  - Uploading outfit images helps colorblind users identify clothing colors
 
-![image]([https://github.com/user-attachments/assets/a97dc936-943a-4312-b304-4f66ac274e80](https://github.com/thejas-c/Colour-Blind-Community-Hub/blob/main/images/WhatsApp%20Image%202025-04-12%20at%2022.09.51.jpeg))
+![image](images/res.jpeg)
