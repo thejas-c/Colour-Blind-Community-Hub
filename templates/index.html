@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Blindness Community Hub - Resources</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Color Blindness Community Hub</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu" class="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="/">Home</a>
+            <a href="/resources">Resources</a>
+            <a href="/tools">Tools</a>
+            <a href="/community">Community</a>
+            <a href="/advocacy">Advocacy</a>
+            <a href="/settings">Settings</a>
+            <a href="/blogs">Blogs</a>
+        </div>
+    </nav>
+    <main>
+        <section class="resource-section">
+            <h2>National Resources and Articles</h2>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Understanding Color Blindness</h3>
+                    <p>Explore the basics of color vision deficiency (CVD) and its impact on daily life, including a detailed overview from the National Eye Institute.</p>
+                    <a href="https://www.nceas.ucsb.edu/sites/default/files/2022-06/Colorblind%20Safe%20Color%20Schemes.pdf" class="card-button" target="_blank">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Barriers in Education for Color Blind Students</h3>
+                    <p>A groundbreaking study by EnChroma reveals how color blindness poses challenges in school, with 78% of respondents facing frustration with color-coded materials.</p>
+                    <a href="https://eyesurgeryguide.org/supporting-color-blindness-tools-and-resources/" class="card-button" target="_blank">Learn More</a>
+                </div>
+            </div>
+            <h2>Case Studies</h2>
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <h4>Daily Challenges of Protanopia</h4>
+                    <p>Read about the experiences of individuals with protanopia, a type of red-green color blindness, and how it affects their education and career choices.</p>
+                    <a href="https://battleforblindness.org/a-world-beyond-colors-practical-resources-for-colorblind-individuals" class="card-button" target="_blank">Read Case</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h2>Stay Connected</h2>
+                <p class="footer-tagline">Empowering the color blindness community.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://www.enchroma.com/pages/color-accessibility-program">Accessibility Support</a></li>
+                        <li>Contact Us : colourblindnesscommunityhub@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/ColourBlindAwareness/" aria-label="Facebook" class="social-icon">Facebook</a>
+                <a href="https://twitter.com/colourblindorg" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="https://www.instagram.com/colourblindawareness/" aria-label="Instagram" class="social-icon">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p>© 2025 Color Blindness Community Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="scroll-top" aria-label="Scroll to top">↑</button>
+    <div id="live-notification" class="sr-only" role="alert"></div>
+    <script>
+        // Highlight the active link based on the current URL
+        const navLinks = document.querySelectorAll('.nav-container a');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active'); // Add "active" class to the matching link
+            } else {
+                link.classList.remove('active'); // Remove "active" class from others
+            }
+        });
+    </script>
+    <script src="static/script.js"></script>
+</body>
+</html>

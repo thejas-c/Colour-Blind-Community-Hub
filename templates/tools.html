@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Blindness Community Hub - Interactive Tools</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add custom spacing between the cards */
+        .tool-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Spacing between boxes */
+        }
+
+        .card {
+            flex: 1 1 calc(50% - 20px);
+            /* Make each box take up 50% of the width minus spacing */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .active {
+            color: blue;
+            /* Highlight the active link in blue */
+            font-weight: bold;
+        }
+
+        #color-detection-canvas {
+            max-width: 100%;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Color Blindness Community Hub</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu" class="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="/">Home</a>
+            <a href="/resources">Resources</a>
+            <a href="/tools">Tools</a>
+            <a href="/community">Community</a>
+            <a href="/advocacy">Advocacy</a>
+            <a href="/settings">Settings</a>
+            <a href="/blogs">Blogs</a>
+        </div>
+    </nav>
+    <main>
+        <section class="tool-section">
+            <h2>Interactive Tools</h2>
+            <div class="tool-grid">
+                <div class="card">
+                    <h3>Color Vision Simulator</h3>
+                    <p>Simulate images as viewed through different types of color blindness. Choose from options like
+                        protanopia, deuteranopia, and tritanopia.</p>
+
+                    <form id="simulator-form">
+                        <input class="card-button" type="file" id="simulator-upload" accept="image/*" required><br><br>
+                        <select class="card-button" id="vision-type" name="vision-type">
+                            <option value="normal">Normal Vision</option>
+                            <option value="protanopia">Protanopia</option>
+                            <option value="deuteranopia">Deuteranopia</option>
+                            <option value="tritanopia">Tritanopia</option>
+                        </select>
+                        <input class="card-button" type="submit" value="Simulate">
+                    </form>
+                    <img id="simulator-preview" src="" alt="Simulation Preview"
+                        style="max-width: 100%; display: none; margin-top: 10px;">
+                    <div id="simulator-result" class="form-message"></div>
+
+                </div>
+                <div class="card">
+                    <h3>Color Detection Tool</h3>
+                    <p>Detect colours within the image for better understanding of the colour patterns.</p>
+
+                    <input class="card-button" type="file" id="color-upload" accept="image/*">
+                    <canvas id="color-detection-canvas"></canvas>
+                    <div id="color-result" class="form-message"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h2>Stay Connected</h2>
+                <p class="footer-tagline">Empowering the color blindness community.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://www.enchroma.com/pages/color-accessibility-program">Accessibility
+                                Support</a></li>
+                        <li>Contact Us : colourblindnesscommunityhub@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/ColourBlindAwareness/" aria-label="Facebook"
+                    class="social-icon">Facebook</a>
+                <a href="https://twitter.com/colourblindorg" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="https://www.instagram.com/colourblindawareness/" aria-label="Instagram"
+                    class="social-icon">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p>© 2025 Color Blindness Community Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>

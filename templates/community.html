@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Blindness Community Hub - Community</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General layout */
+        .community-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .email-subscription {
+            flex: 1 1 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .benefits {
+            flex: 1 1 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .benefits h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            margin-bottom: 20px;
+            font-size: 16px;
+            animation: fadeIn 3s infinite;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .active {
+            color: blue; /* Highlight active link in blue */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Color Blindness Community Hub</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu" class="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="/">Home</a>
+            <a href="/resources">Resources</a>
+            <a href="/tools">Tools</a>
+            <a href="/community">Community</a>
+            <a href="/advocacy">Advocacy</a>
+            <a href="/settings">Settings</a>
+            <a href="/blogs">Blogs</a>
+        </div>
+    </nav>
+    <main class="community-container">
+        <section class="email-subscription">
+            <h2>Join the Community</h2>
+            <p>Subscribe to stay updated and connect with fellow members!</p>
+            <form id="community-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section class="benefits">
+            <h3>Benefits of Joining the Community</h3>
+            <ul class="benefits-list">
+                <li>Access exclusive resources and tools.</li>
+                <li>Connect with experts in accessibility design.</li>
+                <li>Participate in workshops and webinars.</li>
+                <li>Receive community-driven insights and updates.</li>
+                <li>Contribute to advocacy for colorblind accessibility.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <h2>Stay Connected</h2>
+                <p class="footer-tagline">Empowering the color blindness community.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://www.enchroma.com/pages/color-accessibility-program">Accessibility Support</a></li>
+                        <li>Contact Us : colourblindnesscommunityhub@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/ColourBlindAwareness/" aria-label="Facebook" class="social-icon">Facebook</a>
+                <a href="https://twitter.com/colourblindorg" aria-label="Twitter" class="social-icon">Twitter</a>
+                <a href="https://www.instagram.com/colourblindawareness/" aria-label="Instagram" class="social-icon">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p>© 2025 Color Blindness Community Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const communityForm = document.getElementById("community-form");
+
+            if (communityForm) {
+                communityForm.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById("email").value;
+
+                    if (email) {
+                        try {
+                            const response = await fetch('/api/join-community', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ email: email })
+                            });
+
+                            if (response.ok) {
+                                alert(`Thank you for joining the community!  Check your email.`);
+                            } else {
+                                alert('Error sending email.');
+                            }
+                        } catch (error) {
+                            console.error("Error sending request:", error);
+                            alert("An error occurred while submitting the form.");
+                        }
+                    } else {
+                        alert("Please enter a valid email address.");
+                    }
+                });
+            }
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navContainer = document.querySelector('.nav-container');
+            if (menuToggle && navContainer) {
+                menuToggle.addEventListener('click', () => {
+                    navContainer.classList.toggle('active');
+                });
+            }
+
+            // Highlight Active Navigation Link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(a => a.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+        });
+    </script>
+    <script src="static/script.js"></script>
+</body>
+</html>
