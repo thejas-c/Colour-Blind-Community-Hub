@@ -48,12 +48,12 @@ def join_community():
         # Create the email message
         msg = MIMEText("You’re in great company, joining our community of people who are enthusiastic to learn about color blindness and help others.\n\nWith Color Blindness Community Hub , you can gain knowledge about color blindness and you can connect with the people who are interesting.\n\nWe know that taking the first steps isn’t always easy, so we’re here to ensure you hit the ground running, on the right foot.\n\nRegards,\nColor Blindness Community Hub.")
         msg['Subject'] = "Welcome to the Community of Color Blind Awareness!"
-        msg['From'] = 'colourblindnesscommunityhub@gmail.com'
+        msg['From'] = 'YOUR_EMAIL_FROM_WHICH_MAIL_HAS_TO_BE_SENT'
         msg['To'] = email
 
         # Connect to the SMTP server
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp: 
-            smtp.login('colourblindnesscommunityhub@gmail.com', 'nlmavjuewazvijgg')
+            smtp.login('YOUR_EMAIL_FROM_WHICH_MAIL_HAS_TO_BE_SENT', 'YOUR_EMAILS_APP_PASSWORD')
             smtp.send_message(msg)
 
         print(f"Email sent to: {email}")
